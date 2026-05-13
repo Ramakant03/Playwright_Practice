@@ -26,6 +26,13 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     headless: false,
+    screenshot: 'only-on-failure',
+    video: 'on',
+    viewport: null, // disables default 1280x720
+    launchOptions: {
+      args: ['--start-maximized'],
+    }, // starts browser maximized
+
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 

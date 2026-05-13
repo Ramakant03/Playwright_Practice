@@ -21,4 +21,5 @@ test('verify right click functionality', async ({ page }) => {
     await page.getByTestId('ctx-target').click({ button: 'right' });
     await page.waitForTimeout(1000);
     await page.getByRole('button', { name: 'Copy' }).first().click();
+
 });
