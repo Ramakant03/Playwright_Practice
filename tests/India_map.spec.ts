@@ -22,8 +22,8 @@ test.describe('Verify india map test cases', () => {
         const upState: Locator = page.locator("//*[name()='path' and contains(@class,'INUP')]");
         await upState.click();
         await page.waitForTimeout(5000);
-        const statename = page.getByText("Uttar Pradesh").first();
-        console.log("State Name is:" + statename);
+        //     const statename = page.getByText("Uttar Pradesh").first();
+        console.log("State Name is:" + await upState.textContent());
         //expect(upState).toHaveText("Uttar Pradesh");
     });
 
